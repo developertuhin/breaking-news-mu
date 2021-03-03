@@ -20,10 +20,12 @@ function App() {
   return (
     
     <div>
+       <p style={{textAlign:'center'}}><small>All rights-reserved@TuhinKhan2021</small></p>
       <h1 style={{textAlign: 'center', margin:'30px 0',color:'tomato',fontSize:'50px',borderBottom:'5px solid gray'}}>News Portal</h1>
       {
         articles.map( article => <News article = {article}></News>)
       }
+     
     </div>
   );
 }

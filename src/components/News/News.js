@@ -14,7 +14,9 @@ const useStyles = makeStyles({
     maxWidth: 345,
   },
   media: {
-    height: 140,
+    height: 250,
+    margin:10,
+    borderRadius:10,
   },
 });
 
@@ -26,14 +28,14 @@ const News = (props) => {
 
     return (
        <>
-        <Card className={classes.root} style={{margin:' 30px'}}>
-        <CardActionArea>
+        <Card className={classes.root} style={{margin:'40px',borderRadius:'10px',padding:'50px', boxShadow:'10px 10px 50px pink'}}>
+        <CardActionArea >
           <CardMedia
             className={classes.media}
             image={urlToImage}
             title="Contemplative Reptile"
           />
-          <CardContent>
+          <CardContent >
             <Typography gutterBottom variant="h5" component="h2">
              {title}
             </Typography>
@@ -47,11 +49,12 @@ const News = (props) => {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" style= {{padding:'10px 120px', backgroundColor:'tomato'}}>
             <a style={{textDecoration:'none', color:'white'}} href={url} target="_blank">Learn More</a>
           </Button>
         </CardActions>
       </Card>
+    
 
       </>
     );
